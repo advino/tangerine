@@ -1,0 +1,30 @@
+{
+  "name": "ak_library",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "watchify archive.js -p esmify -o public/bundle.js",
+    "serve": "pushd ./public; python3 -m http.server; popd"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "choo": "^7.1.0",
+    "cors": "^2.8.5",
+    "firebase": "^9.1.2",
+    "hyperdrive": "^10.21.0",
+    "hyperswarm": "^2.15.3",
+    "lodash": "^4.17.21",
+    "mirror-folder": "^3.1.0",
+    "mkdirp": "^1.0.4",
+    "pump": "^3.0.0"
+  },
+  "devDependencies": {
+    "browserify": "^17.0.0",
+    "esmify": "^2.1.1",
+    "watchify": "^4.0.0"
+  }
+}
