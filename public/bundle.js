@@ -5,9 +5,10 @@ const { db, ref, onValue } = require('./fb');
 let html = require('choo/html');
 let choo = require('choo');
 
-let app = choo();
+let app = choo({hash: true});
 app.use(state);
 app.route('/', home);
+app.route('#about', about);
 
 
 app.mount('body');
@@ -16,7 +17,7 @@ function state(state, emitter) {
 
     state.lib = [];
     state.filter = "name";
-    state.filters = ["name", "owner", "type"];
+    state.filters = ["name", "type"];
     state.current = "";
 
     emitter.on('DOMContentLoaded', () => {
@@ -69,7 +70,7 @@ function home(state, emit) {
 
             <div class="header-block">
                 <h1 class="header"> TANGERINE LIBRARY </h1>
-                <p class="subheader">A collection of books, magazines, and zines that Laura and I (Advait) have collected.</p>
+                <p class="subheader">A collection of books, magazines, and zines. <a class="subheader" href="#about">Read More</a></p>
             </div>
             <div class="title-block" style="display: flex; justify-content: flex-start; width: 100%;">
 
@@ -89,7 +90,6 @@ function home(state, emit) {
                             <div onclick="${ () => { emit('selectItem', item.name) } }" class="item-block">
                                 <div class="item">
                                     <span style="display: block; width: 25%; height: 100%;">${ item.name }</span>
-                                    <span style="display: block; width: 25%; height: 100%;">${ item.owner }</span>
                                     <span style="display: block; width: 25%; height: 100%;">${ item.type }</span>
                                 </div>
                                 <div class="detail ${state.current == item.name ? 'current' : ''}">
@@ -104,6 +104,26 @@ function home(state, emit) {
                 }
             </div>
         </body>
+    `
+}
+
+function about(state, emit) {
+    return html`
+    <body>
+        <div style="display: flex; flex-direction: column; width: 25%; padding: 8px; gap: 12px;">
+            <a class="subheader" href ="/">
+                Go back
+            </a>
+
+            <span class="subheader">
+                Tangerine Library is a set of books, magazines, and zines I've collected over the last 6 years. I update the list regularly with new finds. Tangerines are great fruits to share, the books in this library are too!
+            </span>
+
+            <span class="subheader">
+                The library is built on choo.js and is set in Editorial New by PangramPangram and Inter by rsms.
+            </span>
+        </div>
+    </body>
     `
 }
 
