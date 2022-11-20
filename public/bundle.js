@@ -77,7 +77,7 @@ function home(state, emit) {
                 ${
                     state.filters.map(f => {
                         return html `
-                            <span onclick="${ () => { emit('setFilter', f)} }" style="display: block; width: 25%;"> ${f} </span>
+                            <span class="item-el" onclick="${ () => { emit('setFilter', f)} }" > ${f} </span>
                         `
                     })
                 }
@@ -89,8 +89,8 @@ function home(state, emit) {
                         return html `
                             <div onclick="${ () => { emit('selectItem', item.name) } }" class="item-block">
                                 <div class="item">
-                                    <span style="display: block; width: 25%; height: 100%;">${ item.name }</span>
-                                    <span style="display: block; width: 25%; height: 100%;">${ item.type }</span>
+                                    <span class="item-el" >${ item.name }</span>
+                                    <span class="item-el" >${ item.type }</span>
                                 </div>
                                 <div class="detail ${state.current == item.name ? 'current' : ''}">
                                     <img class="item-image" src="">

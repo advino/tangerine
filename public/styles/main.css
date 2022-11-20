@@ -64,6 +64,12 @@ body {
    width: 100%;
 }
 
+.item-el {
+    display: block;
+    width: 25%;
+    height: 100%;
+}
+
 .detail {
     display: none;
     flex-direction: row;
@@ -78,9 +84,12 @@ body {
 }
 
 .item-image {
+    min-width: 360px;
     width: 25%;
-    height: auto;
+    height: 240px;
     padding-right: 24px;
+    border: solid 1px #0e0e0f;
+    margin-right: 12px;
 }
 
 
@@ -111,8 +120,9 @@ body {
 .description {
     width: 75%;
     height: auto;
+    font-family: 'PPEditorialNew-Variable', serif;
     padding-right: 12.5%;
-    font-weight: 300;
+    font-weight: 200;
     font-size: 32px;
     line-height: 44px;
 }
