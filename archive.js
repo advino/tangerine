@@ -71,12 +71,12 @@ function home(state, emit) {
                 <h1 class="header"> TANGERINE LIBRARY </h1>
                 <p class="subheader">A collection of books, magazines, and zines. <a class="subheader" href="#about">Read More</a></p>
             </div>
-            <div class="title-block" style="display: flex; justify-content: flex-start; width: 100%;">
+            <div class="title-block" style="display: flex; justify-content: flex-start; gap: 12px; width: 100%;">
 
                 ${
                     state.filters.map(f => {
                         return html `
-                            <span class="item-el" onclick="${ () => { emit('setFilter', f)} }" > ${f} </span>
+                            <span class="item-el" style="text-transform: capitalize;" onclick="${ () => { emit('setFilter', f)} }" > ${f} </span>
                         `
                     })
                 }
@@ -93,7 +93,7 @@ function home(state, emit) {
                                 </div>
                                 <div class="detail ${state.current == item.name ? 'current' : ''}">
                                     <div class="image-container">
-                                        <img class="item-image" src="../styles/assets/sample_image.png">
+                                        <img class="item-image" src="../styles/assets/${item.id}.png">
                                     </div>
                                     <span class="description">
                                         ${ item.about }
@@ -111,7 +111,7 @@ function home(state, emit) {
 function about(state, emit) {
     return html`
     <body>
-        <div style="display: flex; flex-direction: column; width: 100%; padding: 8px; padding-top: 48px; gap: 12px;">
+        <div style="display: flex; flex-direction: column; width: 100%; padding: 8px; padding-top: 48px; gap: 12px; color: #ff5200;">
 
             <span class="description">
                 <u>tangerine library</u> is a set of books, magazines, and zines I've collected over the last 6 years. I update the list regularly with new finds. Tangerines are great fruits to share, the books in this library are too!
