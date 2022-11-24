@@ -93,7 +93,9 @@ function home(state, emit) {
                                     <span class="item-el" >${ item.type }</span>
                                 </div>
                                 <div class="detail ${state.current == item.name ? 'current' : ''}">
-                                    <img class="item-image" src="">
+                                    <div class="image-container">
+                                        <img class="item-image" src="../styles/assets/sample_image.png">
+                                    </div>
                                     <span class="description">
                                         ${ item.about }
                                     </span>
@@ -110,16 +112,13 @@ function home(state, emit) {
 function about(state, emit) {
     return html`
     <body>
-        <div style="display: flex; flex-direction: column; width: 25%; padding: 8px; gap: 12px;">
-            <a class="subheader" href ="/">
-                Go back
-            </a>
+        <div style="display: flex; flex-direction: column; width: 100%; padding: 8px; padding-top: 48px; gap: 12px;">
 
-            <span class="subheader">
-                Tangerine Library is a set of books, magazines, and zines I've collected over the last 6 years. I update the list regularly with new finds. Tangerines are great fruits to share, the books in this library are too!
+            <span class="description">
+                <u>tangerine library</u> is a set of books, magazines, and zines I've collected over the last 6 years. I update the list regularly with new finds. Tangerines are great fruits to share, the books in this library are too!
             </span>
 
-            <span class="subheader">
+            <span class="description">
                 The library is built on choo.js and is set in Editorial New by PangramPangram and Inter by rsms.
             </span>
         </div>
