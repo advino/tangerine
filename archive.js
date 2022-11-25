@@ -66,12 +66,16 @@ function state(state, emitter) {
 function home(state, emit) {
     return html `
         <body>
-
+            <nav>
+                <a href="/">Index</a>
+                <a href="#about">Info</a> 
+             </nav>
             <div class="header-block">
-                <h1 class="header"> TANGERINE LIBRARY </h1>
-                <p class="subheader">A collection of books, magazines, and zines. <a class="subheader" href="#about">Read More</a></p>
+
+                <h1 class="header"> Tangerine Library </h1>
+                <p class="subheader">A collection of books, magazines, and zines</p>
             </div>
-            <div class="title-block" style="display: flex; justify-content: flex-start; gap: 12px; width: 100%;">
+            <div class="title-block item">
 
                 ${
                     state.filters.map(f => {
@@ -110,16 +114,25 @@ function home(state, emit) {
 
 function about(state, emit) {
     return html`
-    <body>
-        <div style="display: flex; flex-direction: column; width: 100%; padding: 8px; padding-top: 48px; gap: 12px; color: #ff5200;">
+    <body>            
+        <nav>
+            <a href="/">Index</a>
+            <a href="#about">Info</a> 
+        </nav>
+        <div style="display: flex; flex-direction: column; width: 100%; padding: 12px; padding-top: 48px; gap: 12px; color: #ff5200;">
 
-            <span class="description">
-                <u>tangerine library</u> is a set of books, magazines, and zines I've collected over the last 6 years. I update the list regularly with new finds. Tangerines are great fruits to share, the books in this library are too!
+            <span class="subheader">
+                ① Tangerine Library is an ongoing curation of books and publications. This list is updated on a regular basis.
+            </span>
+            <span style="width: 75%;" class="subheader">
+                ② The library is built on choo.js and is set in <a href="https://pangrampangram.com/products/editorial-new">Editorial New by PangramPangram</a> and <a href="https://rsms.me/inter/">Inter by rsms</a>.
+            </span>
+            <span style="width: 75%;" class="subheader">
+                ③ A tangerine. Opened and ready to share.
             </span>
 
-            <span class="description">
-                The library is built on choo.js and is set in Editorial New by PangramPangram and Inter by rsms.
-            </span>
+            <img style="width: 240px; height: auto;" src="../styles/assets/tangerine.png">
+
         </div>
     </body>
     `

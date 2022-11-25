@@ -1,4 +1,4 @@
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 1100px) {
     .item-el {
         width: 50%;
     }
@@ -8,9 +8,8 @@
     }
 
     .description {
-        width: 50%;
         font-size: 3.5vw;
-
+        line-height: 4.5vw;
     }
 }
 
@@ -20,6 +19,12 @@
         gap: 12px;
     }
 
+
+
+    .item {
+        gap: 24px;
+    }
+
     .image-container {
         width: 100%
     }
@@ -27,6 +32,6 @@
     .description {
         width: 100%;
         font-size: 6vw;
-
+        line-height: 8vw;
     }
 }
