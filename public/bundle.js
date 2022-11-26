@@ -74,7 +74,9 @@ function home(state, emit) {
             <div class="header-block">
 
                 <h1 class="header"> Tangerine Library </h1>
-                <p class="subheader">A collection of books, magazines, and zines</p>
+                <p class="subheader">
+                    An online bookcase
+                </p>
             </div>
             <div class="title-block item">
 
