@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "watchify archive.js -p esmify -o public/bundle.js",
+    "build" : "browserify archive.js -p esmify -o public/bundle.js",
+    "watch": "watchify archive.js -p esmify -o public/bundle.js",
     "serve": "pushd ./public; python3 -m http.server; popd"
   },
   "keywords": [],
