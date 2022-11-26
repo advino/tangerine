@@ -75,7 +75,7 @@ function home(state, emit) {
 
                 <h1 class="header"> Tangerine Library </h1>
                 <p class="subheader">
-                    An online bookcase
+                    An online bookshelf 
                 </p>
             </div>
             <div class="title-block item">
@@ -123,9 +123,8 @@ function about(state, emit) {
             <a href="#about">Info</a> 
         </nav>
         <div style="display: flex; flex-direction: column; width: 100%; padding: 12px; padding-top: 48px; gap: 12px; color: #ff5200;">
-
             <span class="subheader">
-                ① Tangerine Library is an ongoing curation of books and publications. This list is updated on a regular basis.
+                ① Tangerine Library is a small list of books on art and design. This list is updated on a regular basis.  
             </span>
             <span style="width: 75%;" class="subheader">
                 ② The library is built on choo.js and is set in <a href="https://pangrampangram.com/products/editorial-new">Editorial New by PangramPangram</a> and <a href="https://rsms.me/inter/">Inter by rsms</a>.
