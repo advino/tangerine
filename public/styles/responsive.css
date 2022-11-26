@@ -8,6 +8,7 @@
     }
 
     .description {
+        width: 50%;
         font-size: 3.5vw;
         line-height: 4.5vw;
     }
